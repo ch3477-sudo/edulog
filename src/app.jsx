@@ -54,15 +54,16 @@ function App() {
           const API_BASE =
           import.meta.env.MODE === "development"
             ? "http://localhost:8000"
-            : "edulog-backend-wtnu.onrender.com";
+            : "https://edulog-backend-wtnu.onrender.com";
 
-          const url = `${API_BASE}/api/analyze`;
-          console.log("calling backend:", url); // 디버깅용
+            
+            const url = `${API_BASE}/api/analyze`;
+            console.log("calling backend:", url);  // 디버깅용 로그
 
-          const res = await fetch(url, {
-            method: "POST",
-            body: formData,
-          });
+            const res = await fetch(url, {
+              method: "POST",
+              body: formData,
+            });
 
           const text = await res.text();
           console.log("status:", res.status);
