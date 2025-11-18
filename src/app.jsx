@@ -54,7 +54,7 @@ function App() {
           const API_BASE =
           import.meta.env.MODE === "development"
             ? "http://localhost:8000"
-            : "https://edulog-backend-wtnu.onrender.com/";
+            : "edulog-backend-wtnu.onrender.com";
 
         const res = await fetch(`${API_BASE}/api/analyze`, {
           method: "POST",
